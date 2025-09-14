@@ -1,0 +1,38 @@
+{
+    "table_code": "DP02",
+    "table_name": "Selected Social Characteristics in the United States (Profile)",
+    "geography_levels": ["tract", "county", "state"],
+    "primary_keys": ["geography_id", "year"],
+    "columns": [
+      {"name": "geography_id", "type": "VARCHAR", "description": "Geographic identifier"},
+      {"name": "year", "type": "INTEGER", "description": "ACS 5‑year end year"},
+      {"name": "high_school_graduate_or_higher", "type": "INTEGER", "description": "Number of persons 25 years and over with at least a high‑school diploma"},
+      {"name": "high_school_graduate_or_higher_moe", "type": "INTEGER", "description": "MOE for high_school_graduate_or_higher"},
+      {"name": "bachelors_degree_or_higher", "type": "INTEGER", "description": "Number of persons 25 years and over with a bachelor’s degree or higher"},
+      {"name": "bachelors_degree_or_higher_moe", "type": "INTEGER", "description": "MOE for bachelors_degree_or_higher"},
+      {"name": "civilian_population_18_over", "type": "INTEGER", "description": "Civilian population 18 years and over"},
+      {"name": "civilian_veterans", "type": "INTEGER", "description": "Civilian veterans 18 years and over"}
+    ],
+    "sql_ddl": "CREATE TABLE dp02 (\n  geography_id VARCHAR NOT NULL,\n  year INTEGER NOT NULL,\n  high_school_graduate_or_higher INTEGER,\n  high_school_graduate_or_higher_moe INTEGER,\n  bachelors_degree_or_higher INTEGER,\n  bachelors_degree_or_higher_moe INTEGER,\n  civilian_population_18_over INTEGER,\n  civilian_veterans INTEGER,\n  PRIMARY KEY (geography_id, year)\n);",
+    "json_schema": {
+      "geography_id": {"type": "string", "description": "Geographic identifier"},
+      "year": {"type": "integer", "description": "ACS 5‑year end year"},
+      "high_school_graduate_or_higher": {"type": "integer", "description": "Number of persons 25 years and over with at least a high‑school diploma"},
+      "high_school_graduate_or_higher_moe": {"type": "integer", "description": "Margin of error for high_school_graduate_or_higher"},
+      "bachelors_degree_or_higher": {"type": "integer", "description": "Number of persons 25 years and over with a bachelor’s degree or higher"},
+      "bachelors_degree_or_higher_moe": {"type": "integer", "description": "Margin of error for bachelors_degree_or_higher"},
+      "civilian_population_18_over": {"type": "integer", "description": "Civilian population 18 years and over"},
+      "civilian_veterans": {"type": "integer", "description": "Civilian veterans 18 years and over"}
+    },
+    "example_row": {
+      "geography_id": "04000US48",
+      "year": 2022,
+      "high_school_graduate_or_higher": 800,
+      "high_school_graduate_or_higher_moe": 50,
+      "bachelors_degree_or_higher": 300,
+      "bachelors_degree_or_higher_moe": 25,
+      "civilian_population_18_over": 1000,
+      "civilian_veterans": 100
+    }
+  }
+  

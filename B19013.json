@@ -1,0 +1,26 @@
+{
+    "table_code": "B19013",
+    "table_name": "Median Household Income in the Past 12 Months",
+    "geography_levels": ["tract", "county", "state"],
+    "primary_keys": ["geography_id", "year"],
+    "columns": [
+      {"name": "geography_id", "type": "VARCHAR", "description": "Geographic identifier"},
+      {"name": "year", "type": "INTEGER", "description": "ACS 5‑year end year"},
+      {"name": "median_household_income", "type": "FLOAT", "description": "Median household income (inflation‑adjusted)"},
+      {"name": "median_household_income_moe", "type": "FLOAT", "description": "Margin of error for median household income"}
+    ],
+    "sql_ddl": "CREATE TABLE b19013 (\n  geography_id VARCHAR NOT NULL,\n  year INTEGER NOT NULL,\n  median_household_income FLOAT,\n  median_household_income_moe FLOAT,\n  PRIMARY KEY (geography_id, year)\n);",
+    "json_schema": {
+      "geography_id": {"type": "string", "description": "Geographic identifier"},
+      "year": {"type": "integer", "description": "ACS 5‑year end year"},
+      "median_household_income": {"type": "number", "description": "Median household income (inflation‑adjusted)"},
+      "median_household_income_moe": {"type": "number", "description": "Margin of error for median household income"}
+    },
+    "example_row": {
+      "geography_id": "04000US48",
+      "year": 2022,
+      "median_household_income": 55000.0,
+      "median_household_income_moe": 1500.0
+    }
+  }
+  

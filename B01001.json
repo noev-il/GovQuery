@@ -1,0 +1,41 @@
+{
+    "table_code": "B01001",
+    "table_name": "Sex by Age",
+    "geography_levels": ["block_group", "tract", "county", "state"],
+    "primary_keys": ["geography_id", "year"],
+    "columns": [
+      {"name": "geography_id", "type": "VARCHAR", "description": "Geographic identifier"},
+      {"name": "year", "type": "INTEGER", "description": "ACS 5‑year end year"},
+      {"name": "total_population", "type": "INTEGER", "description": "Total population"},
+      {"name": "total_population_moe", "type": "INTEGER", "description": "Margin of error for total population"},
+      {"name": "male_population", "type": "INTEGER", "description": "Total male population"},
+      {"name": "female_population", "type": "INTEGER", "description": "Total female population"},
+      {"name": "population_under_18", "type": "INTEGER", "description": "Population under 18 years (sum of age groups)"},
+      {"name": "population_18_to_64", "type": "INTEGER", "description": "Population 18–64 years"},
+      {"name": "population_65_and_over", "type": "INTEGER", "description": "Population 65 years and over"}
+    ],
+    "sql_ddl": "CREATE TABLE b01001 (\n  geography_id VARCHAR NOT NULL,\n  year INTEGER NOT NULL,\n  total_population INTEGER,\n  total_population_moe INTEGER,\n  male_population INTEGER,\n  female_population INTEGER,\n  population_under_18 INTEGER,\n  population_18_to_64 INTEGER,\n  population_65_and_over INTEGER,\n  PRIMARY KEY (geography_id, year)\n);",
+    "json_schema": {
+      "geography_id": {"type": "string", "description": "Geographic identifier"},
+      "year": {"type": "integer", "description": "ACS 5‑year end year"},
+      "total_population": {"type": "integer", "description": "Total population"},
+      "total_population_moe": {"type": "integer", "description": "Margin of error for total_population"},
+      "male_population": {"type": "integer", "description": "Total male population"},
+      "female_population": {"type": "integer", "description": "Total female population"},
+      "population_under_18": {"type": "integer", "description": "Population under 18 years"},
+      "population_18_to_64": {"type": "integer", "description": "Population 18–64 years"},
+      "population_65_and_over": {"type": "integer", "description": "Population 65 years and over"}
+    },
+    "example_row": {
+      "geography_id": "04000US48",
+      "year": 2022,
+      "total_population": 1500,
+      "total_population_moe": 20,
+      "male_population": 750,
+      "female_population": 750,
+      "population_under_18": 400,
+      "population_18_to_64": 900,
+      "population_65_and_over": 200
+    }
+  }
+  

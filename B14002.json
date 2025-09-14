@@ -1,0 +1,56 @@
+{
+    "table_code": "B14002",
+    "table_name": "Sex by School Enrollment by Level of School and Type of School",
+    "geography_levels": ["block_group", "tract", "county", "state"],
+    "primary_keys": ["geography_id", "year"],
+    "columns": [
+      {"name": "geography_id", "type": "VARCHAR", "description": "Geographic identifier"},
+      {"name": "year", "type": "INTEGER", "description": "ACS 5‑year end year"},
+      {"name": "male_total", "type": "INTEGER", "description": "Male population 3 years and over"},
+      {"name": "male_enrolled", "type": "INTEGER", "description": "Male population enrolled in school"},
+      {"name": "male_not_enrolled", "type": "INTEGER", "description": "Male population not enrolled in school"},
+      {"name": "female_total", "type": "INTEGER", "description": "Female population 3 years and over"},
+      {"name": "female_enrolled", "type": "INTEGER", "description": "Female population enrolled in school"},
+      {"name": "female_not_enrolled", "type": "INTEGER", "description": "Female population not enrolled in school"},
+      {"name": "male_total_moe", "type": "INTEGER", "description": "Margin of error for male_total"},
+      {"name": "male_enrolled_moe", "type": "INTEGER", "description": "MOE for male_enrolled"},
+      {"name": "male_not_enrolled_moe", "type": "INTEGER", "description": "MOE for male_not_enrolled"},
+      {"name": "female_total_moe", "type": "INTEGER", "description": "MOE for female_total"},
+      {"name": "female_enrolled_moe", "type": "INTEGER", "description": "MOE for female_enrolled"},
+      {"name": "female_not_enrolled_moe", "type": "INTEGER", "description": "MOE for female_not_enrolled"}
+    ],
+    "sql_ddl": "CREATE TABLE b14002 (\n  geography_id VARCHAR NOT NULL,\n  year INTEGER NOT NULL,\n  male_total INTEGER,\n  male_enrolled INTEGER,\n  male_not_enrolled INTEGER,\n  female_total INTEGER,\n  female_enrolled INTEGER,\n  female_not_enrolled INTEGER,\n  male_total_moe INTEGER,\n  male_enrolled_moe INTEGER,\n  male_not_enrolled_moe INTEGER,\n  female_total_moe INTEGER,\n  female_enrolled_moe INTEGER,\n  female_not_enrolled_moe INTEGER,\n  PRIMARY KEY (geography_id, year)\n);",
+    "json_schema": {
+      "geography_id": {"type": "string", "description": "Geographic identifier"},
+      "year": {"type": "integer", "description": "ACS 5‑year end year"},
+      "male_total": {"type": "integer", "description": "Male population 3 years and over"},
+      "male_enrolled": {"type": "integer", "description": "Male population enrolled in school"},
+      "male_not_enrolled": {"type": "integer", "description": "Male population not enrolled in school"},
+      "female_total": {"type": "integer", "description": "Female population 3 years and over"},
+      "female_enrolled": {"type": "integer", "description": "Female population enrolled in school"},
+      "female_not_enrolled": {"type": "integer", "description": "Female population not enrolled in school"},
+      "male_total_moe": {"type": "integer", "description": "Margin of error for male_total"},
+      "male_enrolled_moe": {"type": "integer", "description": "Margin of error for male_enrolled"},
+      "male_not_enrolled_moe": {"type": "integer", "description": "Margin of error for male_not_enrolled"},
+      "female_total_moe": {"type": "integer", "description": "Margin of error for female_total"},
+      "female_enrolled_moe": {"type": "integer", "description": "Margin of error for female_enrolled"},
+      "female_not_enrolled_moe": {"type": "integer", "description": "Margin of error for female_not_enrolled"}
+    },
+    "example_row": {
+      "geography_id": "04000US48",
+      "year": 2022,
+      "male_total": 600,
+      "male_enrolled": 400,
+      "male_not_enrolled": 200,
+      "female_total": 700,
+      "female_enrolled": 500,
+      "female_not_enrolled": 200,
+      "male_total_moe": 10,
+      "male_enrolled_moe": 8,
+      "male_not_enrolled_moe": 5,
+      "female_total_moe": 12,
+      "female_enrolled_moe": 9,
+      "female_not_enrolled_moe": 6
+    }
+  }
+  
